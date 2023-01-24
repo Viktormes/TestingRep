@@ -5,11 +5,16 @@ public class Calculator {
         return i + i1;
     }
 
-    public static short commonCount(int[] array1, int[] array2) {
+    public static int commonCount(int[] array1, int[] array2) {
         if (array1.length == 0 || array2.length == 0)
             return 0;
-        if (array1 [0] == array2[0])
-            return 1;
-        return 0;
+        int count = 0;
+        for (int i = 0; i < array1.length; i++) {
+            if (array1 [i] == array2[i])
+                count++;
+        }
+
+
+        return count;
     }
 }
