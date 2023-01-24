@@ -41,8 +41,27 @@ public class CalculatorTest {
     void twoArraysContainsTwoCommonNumber() {
         var array1 = new int[]{2, 3};
         var array2 = new int[]{2, 3};
+        assertEquals(2, Calculator.commonCount(array1,array2));
+    }
+    @Test
+    void twoArraysWithDifferentLength() {
 
-        assertEquals(2, Calculator.commonCount(array1, array2));
+        var array1 = new int[]{1,2,3};
+        var array2 = new int[]{1,2};
+
+        assertEquals(2, Calculator.commonCount(array1,array2));
 
     }
-}
+    @Test
+    void twoArraysWithDifferentOrder() {
+        var array1 = new int[]{1,2};
+        var array2 = new int []{2,1};
+
+        assertEquals(2, Calculator.commonCount(array1,array2));
+
+    }
+    }
+
+
+
+
