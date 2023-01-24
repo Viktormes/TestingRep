@@ -1,5 +1,6 @@
 package calculator;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -58,6 +59,11 @@ public class CalculatorTest {
         var array2 = new int []{2,1};
 
         assertEquals(2, Calculator.commonCount(array1,array2));
+
+    }
+    @Test
+    void usingNullAsArgumentShouldReturnZeroCommonNumbers() {
+        assertEquals(0,Calculator.commonCount(null,null));
 
     }
     }
