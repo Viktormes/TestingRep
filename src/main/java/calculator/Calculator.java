@@ -1,5 +1,8 @@
 package calculator;
 
+import java.time.LocalTime;
+import java.util.Random;
+
 public class Calculator {
     public static int test(int i, int i1) {
         return i + i1;
@@ -15,4 +18,27 @@ public class Calculator {
                     count++;
         return count;
     }
-}
+
+    public static String greeting(String name, LocalTime currentTime) {
+
+        if (currentTime.isAfter(LocalTime.NOON))
+            return "Good afternoon " + name;
+        return "Good morning " + name;
+
+
+    }
+
+    public static class Dice {
+
+        public int roll() {
+            Random random = new Random();
+            return random.nextInt(1,7);
+
+    }
+
+
+
+
+        }
+    }
+
